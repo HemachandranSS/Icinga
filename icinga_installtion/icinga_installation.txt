@@ -1,0 +1,398 @@
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get update
+[sudo] password for byteally: 
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Get:2 http://packages.microsoft.com/repos/vscode stable InRelease [3,181 B]                                                                   
+Hit:3 http://dl.google.com/linux/chrome/deb stable Release                                                                                    
+Hit:4 http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu xenial InRelease                                                                   
+Get:5 http://security.ubuntu.com/ubuntu xenial-security InRelease [109 kB]                                                              
+Hit:6 https://dl.yarnpkg.com/debian stable InRelease                                                              
+Hit:7 http://in.archive.ubuntu.com/ubuntu xenial InRelease                          
+Get:8 http://packages.microsoft.com/repos/vscode stable/main amd64 Packages [126 kB]                    
+Get:9 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease [109 kB]                                      
+Hit:11 https://deb.nodesource.com/node_10.x xenial InRelease                                                                  
+Hit:12 https://download.docker.com/linux/ubuntu bionic InRelease                                                              
+Get:13 https://packages.microsoft.com/repos/vscode stable InRelease [3,181 B]                                                 
+Get:15 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease [107 kB]                                                                
+Get:16 http://security.ubuntu.com/ubuntu xenial-security/main amd64 DEP-11 Metadata [73.8 kB]
+Get:17 http://security.ubuntu.com/ubuntu xenial-security/main DEP-11 64x64 Icons [73.2 kB]
+Get:18 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 Packages [988 kB] 
+Get:19 http://security.ubuntu.com/ubuntu xenial-security/universe amd64 DEP-11 Metadata [121 kB]
+Get:20 http://security.ubuntu.com/ubuntu xenial-security/universe DEP-11 64x64 Icons [179 kB]         
+Get:21 http://security.ubuntu.com/ubuntu xenial-security/multiverse amd64 DEP-11 Metadata [2,464 B]   
+Get:22 http://in.archive.ubuntu.com/ubuntu xenial-updates/main i386 Packages [839 kB]                                                         
+Get:23 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 DEP-11 Metadata [325 kB]                                                 
+Get:24 http://in.archive.ubuntu.com/ubuntu xenial-updates/main DEP-11 64x64 Icons [233 kB]                                                    
+Get:25 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 DEP-11 Metadata [271 kB]                                             
+Get:26 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe DEP-11 64x64 Icons [403 kB]                                                
+Get:27 http://in.archive.ubuntu.com/ubuntu xenial-updates/multiverse amd64 DEP-11 Metadata [5,960 B]                                          
+Get:28 http://in.archive.ubuntu.com/ubuntu xenial-updates/multiverse DEP-11 64x64 Icons [14.3 kB]                                             
+Get:29 http://in.archive.ubuntu.com/ubuntu xenial-backports/main amd64 DEP-11 Metadata [3,328 B]                                              
+Get:30 http://in.archive.ubuntu.com/ubuntu xenial-backports/universe amd64 DEP-11 Metadata [5,104 B]                                          
+Fetched 3,994 kB in 12s (331 kB/s)                                                                                                            
+Reading package lists... Done
+E: Failed to stat /var/lib/apt/lists/partial/packages.microsoft.com_repos_vscode_dists_stable_InRelease - pkgAcqTransactionItem::TransactionState-stat (2: No such file or directory)
+E: Failed to stat /var/lib/apt/lists/partial/packages.microsoft.com_repos_vscode_dists_stable_main_binary-amd64_Packages - pkgAcqTransactionItem::TransactionState-stat (2: No such file or directory)
+W: Duplicate sources.list entry http://packages.microsoft.com/repos/vscode stable Release
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ apache2
+[Mon Jul 08 14:30:30.939312 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_LOCK_DIR} is not defined
+[Mon Jul 08 14:30:30.939469 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_PID_FILE} is not defined
+[Mon Jul 08 14:30:30.939508 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_RUN_USER} is not defined
+[Mon Jul 08 14:30:30.939522 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_RUN_GROUP} is not defined
+[Mon Jul 08 14:30:30.939552 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Mon Jul 08 14:30:31.152284 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Mon Jul 08 14:30:31.152765 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+[Mon Jul 08 14:30:31.152804 2019] [core:warn] [pid 12477] AH00111: Config variable ${APACHE_LOG_DIR} is not defined
+AH00526: Syntax error on line 74 of /etc/apache2/apache2.conf:
+Invalid Mutex directory in argument file:${APACHE_LOCK_DIR}
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo service apache2 restart
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get install php7.1 php7.1-common php7.1-intl php7.1-dom php7.1-pgsql
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package php7.1
+E: Couldn't find any package by glob 'php7.1'
+E: Couldn't find any package by regex 'php7.1'
+E: Unable to locate package php7.1-common
+E: Couldn't find any package by glob 'php7.1-common'
+E: Couldn't find any package by regex 'php7.1-common'
+E: Unable to locate package php7.1-intl
+E: Couldn't find any package by glob 'php7.1-intl'
+E: Couldn't find any package by regex 'php7.1-intl'
+E: Unable to locate package php7.1-dom
+E: Couldn't find any package by glob 'php7.1-dom'
+E: Couldn't find any package by regex 'php7.1-dom'
+E: Unable to locate package php7.1-pgsql
+E: Couldn't find any package by glob 'php7.1-pgsql'
+E: Couldn't find any package by regex 'php7.1-pgsql'
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get install php7.1
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+E: Unable to locate package php7.1
+E: Couldn't find any package by glob 'php7.1'
+E: Couldn't find any package by regex 'php7.1'
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get update
+Ign:1 http://dl.google.com/linux/chrome/deb stable InRelease
+Get:2 http://packages.microsoft.com/repos/vscode stable InRelease [3,181 B]                                                                   
+Hit:3 http://ppa.launchpad.net/nilarimogard/webupd8/ubuntu xenial InRelease                                                                   
+Hit:4 http://dl.google.com/linux/chrome/deb stable Release                                                                                    
+Hit:5 http://security.ubuntu.com/ubuntu xenial-security InRelease                                                                       
+Get:6 http://packages.microsoft.com/repos/vscode stable/main amd64 Packages [126 kB]                              
+Hit:7 http://in.archive.ubuntu.com/ubuntu xenial InRelease                        
+Get:8 https://packages.microsoft.com/repos/vscode stable InRelease [3,181 B]     
+Hit:9 https://download.docker.com/linux/ubuntu bionic InRelease                                                     
+Hit:10 https://dl.yarnpkg.com/debian stable InRelease                            
+Hit:11 https://deb.nodesource.com/node_10.x xenial InRelease                    
+Hit:13 http://in.archive.ubuntu.com/ubuntu xenial-updates InRelease             
+Hit:14 http://in.archive.ubuntu.com/ubuntu xenial-backports InRelease    
+Fetched 132 kB in 3s (41.7 kB/s)                         
+Reading package lists... Done
+E: Failed to stat /var/lib/apt/lists/partial/packages.microsoft.com_repos_vscode_dists_stable_InRelease - pkgAcqTransactionItem::TransactionState-stat (2: No such file or directory)
+E: Failed to stat /var/lib/apt/lists/partial/packages.microsoft.com_repos_vscode_dists_stable_main_binary-amd64_Packages - pkgAcqTransactionItem::TransactionState-stat (2: No such file or directory)
+W: Duplicate sources.list entry http://packages.microsoft.com/repos/vscode stable Release
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ php
+php        php7.0     phpdismod  phpenmod   phpquery   
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ php
+php        php7.0     phpdismod  phpenmod   phpquery   
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get install php7.0-common
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  libapache2-mod-php7.0 php7.0 php7.0-cli php7.0-curl php7.0-gd php7.0-intl php7.0-json php7.0-mbstring php7.0-mysql php7.0-opcache
+  php7.0-readline php7.0-soap php7.0-xml php7.0-xmlrpc php7.0-zip
+Suggested packages:
+  php-pear
+The following packages will be upgraded:
+  libapache2-mod-php7.0 php7.0 php7.0-cli php7.0-common php7.0-curl php7.0-gd php7.0-intl php7.0-json php7.0-mbstring php7.0-mysql
+  php7.0-opcache php7.0-readline php7.0-soap php7.0-xml php7.0-xmlrpc php7.0-zip
+16 upgraded, 0 newly installed, 0 to remove and 148 not upgraded.
+Need to get 4,486 kB of archives.
+After this operation, 0 B of additional disk space will be used.
+Do you want to continue? [Y/n] y
+Get:1 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-mysql amd64 7.0.33-0ubuntu0.16.04.5 [124 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 php7.0-soap amd64 7.0.33-0ubuntu0.16.04.5 [113 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 php7.0-intl amd64 7.0.33-0ubuntu0.16.04.5 [126 kB]
+Get:4 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-xml amd64 7.0.33-0ubuntu0.16.04.5 [112 kB]
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-json amd64 7.0.33-0ubuntu0.16.04.5 [16.9 kB]
+Get:6 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-xmlrpc amd64 7.0.33-0ubuntu0.16.04.5 [12.7 kB]
+Get:7 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 php7.0-zip amd64 7.0.33-0ubuntu0.16.04.5 [19.9 kB]
+Get:8 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-curl amd64 7.0.33-0ubuntu0.16.04.5 [27.5 kB]
+Get:9 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-gd amd64 7.0.33-0ubuntu0.16.04.5 [27.2 kB]
+Get:10 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0 all 7.0.33-0ubuntu0.16.04.5 [1,284 B]
+Get:11 http://in.archive.ubuntu.com/ubuntu xenial-updates/universe amd64 php7.0-mbstring amd64 7.0.33-0ubuntu0.16.04.5 [465 kB]
+Get:12 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-opcache amd64 7.0.33-0ubuntu0.16.04.5 [77.2 kB]
+Get:13 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-readline amd64 7.0.33-0ubuntu0.16.04.5 [12.8 kB]
+Get:14 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-cli amd64 7.0.33-0ubuntu0.16.04.5 [1,282 kB]
+Get:15 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libapache2-mod-php7.0 amd64 7.0.33-0ubuntu0.16.04.5 [1,224 kB]
+Get:16 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 php7.0-common amd64 7.0.33-0ubuntu0.16.04.5 [844 kB]                     
+Fetched 4,486 kB in 8s (509 kB/s)                                                                                                             
+(Reading database ... 237606 files and directories currently installed.)
+Preparing to unpack .../php7.0-mysql_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-mysql (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-soap_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-soap (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-intl_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-intl (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-xml_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-xml (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-json_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-json (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-xmlrpc_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-xmlrpc (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-zip_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-zip (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-curl_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-curl (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-gd_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-gd (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0_7.0.33-0ubuntu0.16.04.5_all.deb ...
+Unpacking php7.0 (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-mbstring_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-mbstring (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-opcache_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-opcache (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-readline_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-readline (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-cli_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-cli (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../libapache2-mod-php7.0_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking libapache2-mod-php7.0 (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Preparing to unpack .../php7.0-common_7.0.33-0ubuntu0.16.04.5_amd64.deb ...
+Unpacking php7.0-common (7.0.33-0ubuntu0.16.04.5) over (7.0.33-0ubuntu0.16.04.4) ...
+Processing triggers for man-db (2.7.5-1) ...
+Setting up php7.0-common (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-mysql (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-soap (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-intl (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-xml (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-json (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-xmlrpc (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-zip (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-curl (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-gd (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-opcache (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-readline (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-cli (7.0.33-0ubuntu0.16.04.5) ...
+Setting up libapache2-mod-php7.0 (7.0.33-0ubuntu0.16.04.5) ...
+apache2_invoke php7.0: already enabled
+Setting up php7.0 (7.0.33-0ubuntu0.16.04.5) ...
+Setting up php7.0-mbstring (7.0.33-0ubuntu0.16.04.5) ...
+Processing triggers for libapache2-mod-php7.0 (7.0.33-0ubuntu0.16.04.5) ...
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get install php7.0-intl php7.0-dom php7.1-mysql
+[sudo] password for byteally: 
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get install php7.0-intl php7.0-dom php7.0-mysql
+[sudo] password for byteally: 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'php7.0-xml' instead of 'php7.0-dom'
+php7.0-mysql is already the newest version (7.0.33-0ubuntu0.16.04.5).
+php7.0-xml is already the newest version (7.0.33-0ubuntu0.16.04.5).
+php7.0-intl is already the newest version (7.0.33-0ubuntu0.16.04.5).
+0 upgraded, 0 newly installed, 0 to remove and 148 not upgraded.
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get install php7.0-dom 
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+Note, selecting 'php7.0-xml' instead of 'php7.0-dom'
+php7.0-xml is already the newest version (7.0.33-0ubuntu0.16.04.5).
+0 upgraded, 0 newly installed, 0 to remove and 148 not upgraded.
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo vim /etc/php/7.0/apache2/php.ini
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ apt-get install icinga2 icinga2-ido-mysql
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo apt-get install icinga2 icinga2-ido-mysql
+Reading package lists... Done
+Building dependency tree       
+Reading state information... Done
+The following additional packages will be installed:
+  dbconfig-common icinga2-bin icinga2-common icinga2-doc libboost-program-options1.58.0 libboost-regex1.58.0 libboost-thread1.58.0 libicinga2
+  monitoring-plugins-basic monitoring-plugins-common
+Suggested packages:
+  dbconfig-mysql | dbconfig-pgsql | dbconfig-sqlite | dbconfig-sqlite3 | dbconfig-no-thanks icinga2-studio vim-icinga2 icinga | icinga
+  | nagios3
+The following NEW packages will be installed:
+  dbconfig-common icinga2 icinga2-bin icinga2-common icinga2-doc icinga2-ido-mysql libboost-program-options1.58.0 libboost-regex1.58.0
+  libboost-thread1.58.0 libicinga2 monitoring-plugins-basic monitoring-plugins-common
+0 upgraded, 12 newly installed, 0 to remove and 148 not upgraded.
+Need to get 4,176 kB of archives.
+After this operation, 22.8 MB of additional disk space will be used.
+Do you want to continue? [Y/n] Y
+Get:1 http://in.archive.ubuntu.com/ubuntu xenial/main amd64 dbconfig-common all 2.0.4ubuntu1 [582 kB]
+Get:2 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-program-options1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [138 kB]
+Get:3 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-regex1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [261 kB]                
+Get:4 http://in.archive.ubuntu.com/ubuntu xenial-updates/main amd64 libboost-thread1.58.0 amd64 1.58.0+dfsg-5ubuntu3.1 [47.0 kB]              
+Get:5 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 icinga2-common all 2.4.1-2ubuntu1 [42.2 kB]                                   
+Get:6 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 libicinga2 amd64 2.4.1-2ubuntu1 [2,433 kB]                                    
+Get:7 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 icinga2-bin amd64 2.4.1-2ubuntu1 [48.3 kB]                                    
+Get:8 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 icinga2 amd64 2.4.1-2ubuntu1 [6,392 B]                                        
+Get:9 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 icinga2-doc all 2.4.1-2ubuntu1 [217 kB]                                       
+Get:10 http://in.archive.ubuntu.com/ubuntu xenial/universe amd64 icinga2-ido-mysql amd64 2.4.1-2ubuntu1 [113 kB]                              
+Get:11 http://in.archive.ubuntu.com/ubuntu xenial/main amd64 monitoring-plugins-common amd64 2.1.2-2ubuntu2 [49.1 kB]                         
+Get:12 http://in.archive.ubuntu.com/ubuntu xenial/main amd64 monitoring-plugins-basic amd64 2.1.2-2ubuntu2 [238 kB]                           
+Fetched 4,176 kB in 20s (202 kB/s)                                                                                                            
+Preconfiguring packages ...
+Selecting previously unselected package dbconfig-common.
+(Reading database ... 237606 files and directories currently installed.)
+Preparing to unpack .../dbconfig-common_2.0.4ubuntu1_all.deb ...
+Unpacking dbconfig-common (2.0.4ubuntu1) ...
+Selecting previously unselected package libboost-program-options1.58.0:amd64.
+Preparing to unpack .../libboost-program-options1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+Unpacking libboost-program-options1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Selecting previously unselected package libboost-regex1.58.0:amd64.
+Preparing to unpack .../libboost-regex1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+Unpacking libboost-regex1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Selecting previously unselected package libboost-thread1.58.0:amd64.
+Preparing to unpack .../libboost-thread1.58.0_1.58.0+dfsg-5ubuntu3.1_amd64.deb ...
+Unpacking libboost-thread1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Selecting previously unselected package icinga2-common.
+Preparing to unpack .../icinga2-common_2.4.1-2ubuntu1_all.deb ...
+Unpacking icinga2-common (2.4.1-2ubuntu1) ...
+Selecting previously unselected package libicinga2.
+Preparing to unpack .../libicinga2_2.4.1-2ubuntu1_amd64.deb ...
+Unpacking libicinga2 (2.4.1-2ubuntu1) ...
+Selecting previously unselected package icinga2-bin.
+Preparing to unpack .../icinga2-bin_2.4.1-2ubuntu1_amd64.deb ...
+Unpacking icinga2-bin (2.4.1-2ubuntu1) ...
+Selecting previously unselected package icinga2.
+Preparing to unpack .../icinga2_2.4.1-2ubuntu1_amd64.deb ...
+Unpacking icinga2 (2.4.1-2ubuntu1) ...
+Selecting previously unselected package icinga2-doc.
+Preparing to unpack .../icinga2-doc_2.4.1-2ubuntu1_all.deb ...
+Unpacking icinga2-doc (2.4.1-2ubuntu1) ...
+Selecting previously unselected package icinga2-ido-mysql.
+Preparing to unpack .../icinga2-ido-mysql_2.4.1-2ubuntu1_amd64.deb ...
+Unpacking icinga2-ido-mysql (2.4.1-2ubuntu1) ...
+Selecting previously unselected package monitoring-plugins-common.
+Preparing to unpack .../monitoring-plugins-common_2.1.2-2ubuntu2_amd64.deb ...
+Unpacking monitoring-plugins-common (2.1.2-2ubuntu2) ...
+Selecting previously unselected package monitoring-plugins-basic.
+Preparing to unpack .../monitoring-plugins-basic_2.1.2-2ubuntu2_amd64.deb ...
+Unpacking monitoring-plugins-basic (2.1.2-2ubuntu2) ...
+Processing triggers for doc-base (0.10.7) ...
+Processing 3 added doc-base files...
+Processing triggers for man-db (2.7.5-1) ...
+Processing triggers for libc-bin (2.23-0ubuntu11) ...
+Processing triggers for ureadahead (0.100.0-19.1) ...
+ureadahead will be reprofiled on next reboot
+Processing triggers for systemd (229-4ubuntu21.21) ...
+Setting up dbconfig-common (2.0.4ubuntu1) ...
+
+Creating config file /etc/dbconfig-common/config with new version
+Setting up libboost-program-options1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Setting up libboost-regex1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Setting up libboost-thread1.58.0:amd64 (1.58.0+dfsg-5ubuntu3.1) ...
+Setting up icinga2-common (2.4.1-2ubuntu1) ...
+Adding system-user for nagios
+Setting up libicinga2 (2.4.1-2ubuntu1) ...
+Setting up icinga2-bin (2.4.1-2ubuntu1) ...
+enabling default icinga2 features
+Enabling feature checker. Make sure to restart Icinga 2 for these changes to take effect.
+Enabling feature notification. Make sure to restart Icinga 2 for these changes to take effect.
+Enabling feature mainlog. Make sure to restart Icinga 2 for these changes to take effect.
+Setting up icinga2 (2.4.1-2ubuntu1) ...
+Setting up icinga2-doc (2.4.1-2ubuntu1) ...
+Setting up icinga2-ido-mysql (2.4.1-2ubuntu1) ...
+Determining localhost credentials from /etc/mysql/debian.cnf: succeeded.
+dbconfig-common: writing config to /etc/dbconfig-common/icinga2-ido-mysql.conf
+
+Creating config file /etc/dbconfig-common/icinga2-ido-mysql.conf with new version
+
+Creating config file /etc/icinga2/features-available/ido-mysql.conf with new version
+granting access to database icinga2 for icinga2@localhost: success.
+verifying access for icinga2@localhost: success.
+creating database icinga2: success.
+verifying database icinga2 exists: success.
+populating database via sql...  
+
+
+
+
+
+
+
+
+
+done.
+dbconfig-common: flushing administrative password
+Setting up monitoring-plugins-common (2.1.2-2ubuntu2) ...
+Setting up monitoring-plugins-basic (2.1.2-2ubuntu2) ...
+
+Creating config file /etc/nagios-plugins/config/apt.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/dhcp.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/disk.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/dummy.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/ftp.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/http.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/load.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/mail.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/news.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/ntp.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/ping.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/procs.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/real.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/ssh.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/tcp_udp.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/telnet.cfg with new version
+
+Creating config file /etc/nagios-plugins/config/users.cfg with new version
+Setcap for check_icmp and check_dhcp worked!
+Processing triggers for libc-bin (2.23-0ubuntu11) ...
+Processing triggers for ureadahead (0.100.0-19.1) ...
+Processing triggers for systemd (229-4ubuntu21.21) ...
+
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo icinga2 feature enable ido-pgsql
+critical/cli: Cannot enable feature 'ido-pgsql'. Source file '/etc/icinga2/features-available/ido-pgsql.conf' does not exist.
+critical/cli: Cannot enable feature(s): ido-pgsql
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo icinga2 feature enable ido-mysql
+Enabling feature ido-mysql. Make sure to restart Icinga 2 for these changes to take effect.
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo icinga2 feature enable command
+Enabling feature command. Make sure to restart Icinga 2 for these changes to take effect.
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo icinga2 feature 
+disable  enable   list     
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo icinga2 feature list
+Disabled features: api compatlog debuglog gelf graphite icingastatus livestatus opentsdb perfdata statusdata syslog
+Enabled features: checker command ido-mysql mainlog notification
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo systemctl restart icinga2
+byteally@byteally-Dell-System-XPS-L502X:~/Documents/Learning$ sudo systemctl status icinga2
+● icinga2.service - Icinga host/service/network monitoring system
+   Loaded: loaded (/lib/systemd/system/icinga2.service; enabled; vendor preset: enabled)
+   Active: active (running) since Mon 2019-07-08 15:24:54 IST; 20s ago
+  Process: 31636 ExecStartPre=/usr/lib/icinga2/prepare-dirs /usr/lib/icinga2/icinga2 (code=exited, status=0/SUCCESS)
+ Main PID: 31720 (icinga2)
+    Tasks: 16
+   Memory: 26.6M
+      CPU: 3.764s
+   CGroup: /system.slice/icinga2.service
+           ├─31720 /usr/lib/x86_64-linux-gnu/icinga2/sbin/icinga2 --no-stack-rlimit daemon -e 
+           ├─31801 /usr/lib/nagios/plugins/check_apt
+           ├─31802 /usr/lib/nagios/plugins/check_http -I 127.0.0.1 -u /
+           └─31803 /usr/bin/apt-get -o Debug::NoLocking=true -s -qq upgrade
+
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:24:55 +0530] information/ConfigObject: Restored 96 objects. Loade
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:24:55 +0530] information/ConfigItem: Triggering Start signal for 
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:24:55 +0530] information/DbConnection: Resuming IDO connection: i
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:24:55 +0530] information/ConfigItem: Activated all objects.
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:24:55 +0530] information/ConfigCompiler: Compiling config file: /
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:24:55 +0530] information/IdoMysqlConnection: MySQL IDO instance i
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:25:00 +0530] information/Notification: Sending notification 'byte
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:25:00 +0530] information/Notification: Completed sending notifica
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: [2019-07-08 15:25:00 +0530] warning/PluginNotificationTask: Notification command
+Jul 08 15:25:01 byteally-Dell-System-XPS-L502X icinga2[31720]: /usr/bin/printf: write error: Broken pipe
+lines 1-24/24 (END)

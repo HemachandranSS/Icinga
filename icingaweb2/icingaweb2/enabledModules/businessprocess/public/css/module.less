@@ -1,0 +1,1131 @@
+a:focus {
+    outline: none;
+    text-decoration: underline;
+    &::before {
+        text-decoration: none;
+    }
+}
+
+.action-bar a {
+    color: @icinga-blue;
+    &:hover::before {
+        text-decoration: none;
+    }
+    margin-right: 1em;
+}
+
+form a {
+    color: @icinga-blue;
+}
+
+div.bp {
+  margin-bottom: 4px;
+}
+
+.simulation div.bp {
+    border-right: 1em solid @colorCriticalHandled;
+    padding-right: 1em;
+    background: white;
+}
+
+table.bp {
+    /* Business process table styling starts here */
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    color: @text-color;
+    border-collapse: collapse;
+    border-spacing: 0;
+    box-sizing: border-box;
+    font-size: 1em;
+    font-weight: normal;
+
+    /* Reset all paddings and margins, just to be on the safe side */
+    th, td {
+        padding: 0;
+        margin: 0;
+    }
+
+    /* Left outer margin on nested BPs */
+    table.bp {
+
+        width: 99.6%;
+        margin-left: .4%;
+        margin-top: 4px;
+
+    }
+
+    .time-since {
+        display: none;
+    }
+}
+
+table.bp th {
+  font-weight: bold;
+}
+
+/* END of font settings */
+
+/* No focus outline on our links, look ugly */
+table.bp a:focus {
+    outline: none;
+}
+
+/* No link underlining */
+table.bp a, table.bp a:hover {
+  text-decoration: none;
+}
+
+/* White font for all hovered objects */
+table.bp.hovered {
+    color: white;
+
+    > tbody > tr > td > a > .time-since {
+        display: inline;
+    }
+}
+
+table.bp.handled.hovered {
+    color: #0a0a0a;
+}
+
+table.bp a {
+    color: inherit;
+}
+
+/* Show a pointer when hovering th, highlighting is JS-triggered */
+table.bp tr th   {
+    cursor: pointer;
+}
+
+/* Expand / collapse styling */
+table.bp.process {
+
+    position: relative;
+
+    > tbody > tr:first-child > td:before {
+        content: '\e81d';
+        font-family: ifont;
+        position: absolute;
+        font-size: 1.5em;
+        margin-left: -0.8em;
+        -webkit-transition: -webkit-transform 0.3s;
+        -moz-transition: -moz-transform 0.3s;
+        -o-transition: -o-transform 0.3s;
+        transition: transform 0.3s;
+    }
+
+    &.collapsed {
+
+        > tbody > tr:first-child > td:before {
+            -moz-transform:rotate(-90deg);
+            -ms-transform:rotate(-90deg);
+            -o-transform:rotate(-90deg);
+            -webkit-transform:rotate(-90deg);
+            transform:rotate(-90deg);
+        }
+
+        table.bp, th span {
+            display: none;
+        }
+    }
+}
+
+table.bp th > a, table.bp td > a, table.bp td > span {
+    display: block;
+    text-decoration: none;
+}
+
+table.bp span.op {
+    width: 1.5em;
+    min-height: 1.5em;
+    margin-top: 1em;
+    display: block;
+    line-height: 2em;
+    -moz-transform: rotate(-90deg);
+    -ms-transform: rotate(-90deg);
+    -o-transform: rotate(-90deg);
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+table.bp .icon {
+    float: left;
+    margin-top: 0.4em;
+    margin-right: 0.4em;
+}
+
+table.bp.node {
+    td:before {
+        font-family: ifont;
+        z-index: 1;
+        font-size: 1.25em;
+        position: absolute;
+        margin-left: 1.25em;
+        margin-top: 0.25em;
+    }
+}
+
+table.bp.node.subtree td:before {
+    content: '\e80e';
+}
+
+table.bp.node.service td:before {
+    content: '\e840';
+}
+
+table.bp.node.host td:before {
+    content: '\e866';
+}
+
+/* Border defaults */
+table.bp {
+    border-width: 0;
+    border-style: solid;
+    border-color: transparent;
+}
+
+table.bp tr, table.bp tbody, table.bp th, table.bp td, table.bp.node td > a, table.node.missing td > span {
+    border-width: 0;
+    border-style: inherit;
+    border-color: inherit;
+}
+
+table.bp td > a, table.node.missing td > span {
+    height: 2.5em;
+    line-height: 2.5em;
+    padding-left: 0.5em;
+    display: block;
+}
+
+table.bp.node td > a:last-child, table.node.missing td > span {
+    padding-left: 2.5em;
+    background-repeat: no-repeat;
+    background-position: 0.5em 0.5em;
+    border-left-width: 0.8em;
+}
+
+table.bp.node.handled td > a:last-child, table.bp.node.ok td > a:last-child,
+    table.node.missing td > span, table.bp.node.up td > a:last-child
+{
+    border-left-width: 0.3em;
+    background-position: 1em 0.5em;
+    padding-left: 3em;
+}
+
+table.bp th {
+    border-left-width: 0.8em;
+    width: 1.8em;
+}
+
+table.process.missing th span {
+    display: none;
+}
+
+table.bp.handled > tbody > tr > th, table.bp.ok > tbody > tr > th {
+    border-left-width: 0.3em;
+    width: 2em;
+}
+
+/* Operator: upper line */
+table.bp.operator > tbody > tr:first-child > * {
+    border-top-width: 1px;
+    border-top-style: solid;
+}
+
+table.bp.operator.hovered > tbody > tr:first-child > * {
+    border-top-style: solid;
+}
+
+/* Set colors based on element state */
+table.bp {
+    &.ok                  { border-color: @colorOk; }
+    &.up                  { border-color: @colorOk; }
+    &.warning             { border-color: @colorWarning; }
+    &.warning.handled     { border-color: @colorWarningHandled; }
+    &.critical            { border-color: @colorCritical; }
+    &.critical.handled    { border-color: @colorCriticalHandled; }
+    &.down                { border-color: @colorCritical; }
+    &.down.handled        { border-color: @colorCriticalHandled; }
+    &.unknown             { border-color: @colorUnknown; }
+    &.unknown.handled     { border-color: @colorUnknownHandled; }
+    &.unreachable         { border-color: @colorUnknown; }
+    &.unreachable.handled { border-color: @colorUnknownHandled; }
+    &.pending             { border-color: @colorPending; }
+    &.missing             { border-color: #ccc; }
+    &.hovered {
+        &.ok > tbody > tr > {
+            th, td > a { background-color: @colorOk; }
+        }
+        &.up > tbody > tr > {
+            th, td > a { background-color: @colorOk; }
+        }
+        &.warning > tbody > tr > {
+            th, td > a { background-color: @colorWarning; }
+        }
+        &.warning.handled > tbody > tr {
+            > th, > td > a { background-color: @colorWarningHandled; }
+        }
+        &.critical > tbody > tr > {
+            th, td > a { background-color: @colorCritical; }
+        }
+        &.critical.handled > tbody > tr > {
+            th, td > a { background-color: @colorCriticalHandled; }
+        }
+        &.down > tbody > tr > {
+            th, td > a { background-color: @colorCritical; }
+        }
+        &.down.handled > tbody > tr > {
+            th, td > a { background-color: @colorCriticalHandled; }
+        }
+        &.unknown > tbody > tr > {
+            th, td > a { background-color: @colorUnknown; }
+        }
+        &.unknown.handled > tbody > tr > {
+            th, td > a { background-color: @colorUnknownHandled; }
+        }
+        &.unreachable > tbody > tr > {
+            th, td > a { background-color: @colorUnknown; }
+        }   
+        &.unreachable.handled > tbody > tr > {
+            th, td > a { background-color: @colorUnreachableHandled; }
+        }
+        &.pending > tbody > tr > {
+            th, td > a { background-color: @colorPending; }
+        }
+        &.missing > tbody > tr > {
+            th, td > a, td > span { background-color: #ccc; }
+        }
+    }
+}
+
+/* Reduce font size after the 3rd level... */
+table.bp table.bp table.bp table.bp {
+    font-size: 0.95em;
+}
+
+/* ...and keep it constant afterwards */
+table.bp table.bp table.bp table.bp table.bp {
+    font-size: 1em;
+}
+/* Transitions */
+div.knightrider table.bp {
+
+    // That's ugly, I know
+    .transition(@val1, @val2) {
+        transition: @val1, @val2;
+        -moz-transition: @val1, @val2;
+        -o-transition: @val1, @val2;
+        -webkit-transition: @val1, @val2;
+    }
+    > tbody > tr > td > a:last-child, > tbody > tr > td > span, > tbody > tr > th {
+        // Fade out
+        .transition(color 0.5s 0.1s step-start,
+         background-color 0.5s 0.1s ease-out
+        );
+    }
+
+    &.hovered > tbody > tr {
+        > td > a:last-child, > td > span, > th {
+            // Fade in
+            .transition(color 0.0s 0.0s step-start,
+             background-color 0.0s 0.0s ease-out
+            );
+        }
+    }
+}
+
+/** BEGIN Dashboard **/
+.overview-dashboard {
+    > div.action {
+        width: 20em;
+        display: inline-block;
+        vertical-align: top;
+
+        > a {
+            text-decoration: none;
+            color: inherit;
+            vertical-align: middle;
+            display: block;
+            padding: 1em;
+            word-wrap: break-word;
+            width: 100%;
+            height: 12em;
+            overflow: hidden;
+            box-sizing: border-box;
+
+            > span.header {
+                font-weight: bold;
+                display: block;
+                font-size: 1.25em;
+            }
+
+            &:hover {
+                background-color: @text-color;
+                color: white;
+            }
+
+            &.addnew:hover {
+                background-color: @icinga-blue;
+            }
+
+            i {
+                float: left;
+                font-size: 2.5em;
+                margin-top: -0.1em;
+                margin-bottom: 2em;
+                color: inherit;
+            }
+        }
+    }
+}
+/** END Dashboard **/
+
+/** BEGIN Badges **/
+.badges {
+    display: block;
+    padding: 0.5em;
+
+    .badge {
+        border: 1px solid white;
+        margin: 0;
+        margin-right: 1px;
+    }
+}
+
+div.bp .badges {
+    display: inline-block;
+    padding-top: 0;
+}
+
+.badge-critical, .badge-down { background: @colorCritical; }
+.badge-unknown, .badge-unreachable { background: @colorUnknown; }
+.badge-warning { background: @colorWarning; }
+.badge-pending { background: @colorPending; }
+.badge-missing { background: #ccc; }
+/** END Badges **/
+
+/** BEGIN Tiles **/
+.tiles:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+
+.tiles > div {
+    color: white;
+    width: 12em;
+    display: inline-block;
+    float: left;
+    vertical-align: top;
+    margin-right: 0.2em;
+    margin-bottom: 0.2em;
+    height: 6em;
+    cursor: pointer;
+
+    .badges {
+        text-align: center;
+        font-size: 0.5em;
+        display: block;
+    }
+
+    > a {
+        display: block;
+    }
+
+    &:hover {
+        box-shadow: 0px 0px 5px #666;
+    }
+
+    .actions {
+        font-size: 0.75em;
+        margin-left: 0.5em;
+        padding-top: 0.2em;
+        height: 1.8em;
+
+        i {
+            float: none;
+            display: block;
+            width: 100%;
+            font-size: 1em;
+            line-height: normal;
+            margin: 0;
+            padding: 0 0 0 0.25em;
+        }
+        a {
+            margin: 0;
+            padding: 0;
+            display: inline-block;
+            width: 1.5em;
+            height: 1.5em;
+            border-radius: 0.3em;
+        }
+
+        a:hover {
+            background-color: white;
+            color: @text-color;
+        }
+    }
+}
+
+
+.tiles > div.parent::before {
+    content: '&';
+    position: absolute;
+    font-size: 1.2em;
+}
+
+.tiles > div.parent {
+    width: 100%;
+    height: 2em;
+}
+
+.tiles > div > a {
+    text-decoration: none;
+    font-size: 0.5em;
+    color: inherit;
+    vertical-align: middle;
+    text-align: center;
+    padding: 1em;
+    font-weight: bold;
+    word-wrap: break-word;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.tiles {
+    > .critical            { background-color: @colorCritical; background-color: @colorCritical; color: white; }
+    > .critical.handled    { background-color: @colorCriticalHandled; }
+    > .down                { background-color: @colorCritical; }
+    > .down.handled        { background-color: @colorCriticalHandled; }
+    > .unknown             { background-color: @colorUnknown; }
+    > .unknown.handled     { background-color: @colorUnknownHandled; }
+    > .unreachable         { background-color: @colorUnknown; }
+    > .unreachable.handled { background-color: @colorUnknownHandled; }
+    > .warning             { background-color: @colorWarning; }
+    > .warning.handled     { background-color: @colorWarningHandled; }
+    > .ok                  { background-color: @colorOk; }
+    > .up                  { background-color: @colorOk; }
+    > .pending             { background-color: @colorPending; }
+    > .missing             { background-color: #ccc; }
+    > .addnew              { background-color: @icinga-blue; }
+}
+
+/*
+.tiles > div:hover {
+    > .critical            { background: white; color: @text-color; }
+    > .critical.handled    { background: @colorCriticalHandled; }
+    > .down                { background: @colorCritical; }
+    > .down.handled        { background: @colorCriticalHandled; }
+    > .unknown             { background: @colorUnknown; }
+    > .unknown.handled     { background: @colorUnknownHandled; }
+    > .unreachable         { background: @colorUnknown; }
+    > .unreachable.handled { background: @colorUnknownHandled; }
+    > .warning             { background: @colorWarning; }
+    > .warning.handled     { background: @colorWarningHandled; }
+    > .ok                  { background: @colorOk; }
+    > .pending             { background: @colorPending; }
+    > .missing             { background: #ccc; }
+}
+*/
+/*
+.tiles .missing a {
+    pointer-events: none;
+    cursor: default;
+}
+*/
+
+.tiles.few { font-size: 2.5em; }
+.tiles.normal { font-size: 2.1em; }
+.tiles.many { font-size: 1.8em; }
+
+#layout.twocols, #layout.layout-minimal, div.compact {
+    .tiles.few { font-size: 1.8em; }
+    .tiles.normal { font-size: 1.8em; }
+    .tiles.many { font-size: 1.8em; }
+}
+
+#layout.fullscreen-layout .controls {
+    padding: 0 1em;
+}
+
+/** END of tiles **/
+
+/** BEGIN breadcrumb **/
+
+.breadcrumb {
+    list-style: none;
+    overflow: hidden;
+    padding: 0;
+
+    .badges {
+        display: inline-block;
+        padding: 0 0 0 0.5em;
+        .badge {
+            line-height: 1.25em;
+            font-size: 0.8em;
+            border: 1px solid white;
+            margin: -0.25em 1px 0 0;
+        }
+    }
+}
+
+.breadcrumb {
+    > .critical            a { background: @colorCritical; }
+    > .critical.handled    a { background: @colorCriticalHandled; }
+    > .unknown             a { background: @colorUnknown; }
+    > .unknown.handled     a { background: @colorUnknownHandled; }
+    > .warning             a { background: @colorWarning; }
+    > .warning.handled     a { background: @colorWarningHandled; }
+    > .ok                  a { background: @colorOk; }
+}
+
+.breadcrumb {
+    > .critical            a:after { border-left-color: @colorCritical; }
+    > .critical.handled    a:after { border-left-color: @colorCriticalHandled; }
+    > .unknown             a:after { border-left-color: @colorUnknown; }
+    > .unknown.handled     a:after { border-left-color: @colorUnknownHandled; }
+    > .warning             a:after { border-left-color: @colorWarning; }
+    > .warning.handled     a:after { border-left-color: @colorWarningHandled; }
+    > .ok                  a:after { border-left-color: @colorOk; }
+}
+
+.breadcrumb:after {
+    content:'';
+    display:block;
+    clear: both;
+}
+.breadcrumb li {
+    float: left;
+    cursor: pointer;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+
+}
+.breadcrumb li a {
+    color: white;
+    margin: 0;
+    font-size: 1.2em;
+    text-decoration: none;
+    padding-left: 2em;
+    line-height: 2.5em;
+    background: @icinga-blue;
+    position: relative;
+    display: block;
+    float: left;
+    &:focus {
+        outline: none;
+    }
+}
+
+.breadcrumb li a:before, .breadcrumb li a:after {
+    content: " ";
+    display: block;
+    width: 0;
+    height: 0;
+    border-top: 1.3em solid transparent;
+    border-bottom: 1.2em solid transparent;
+    position: absolute;
+    margin-top: -1.2em;
+    top: 50%;
+    left: 100%;
+}
+
+.breadcrumb li a:before {
+    border-left: 1.2em solid white;
+    margin-left: 1px;
+    z-index: 1;
+}
+
+.breadcrumb li a:after {
+    border-left: 1.2em solid @icinga-blue;
+    z-index: 2;
+}
+
+.breadcrumb li:first-child a {
+    padding-left: 1em;
+    padding-right: 0.5em;
+}
+.breadcrumb li:last-child a {
+    cursor: default;
+}
+.breadcrumb li:last-child a:hover {
+
+}
+
+.breadcrumb li:not(:last-child) a:hover { background: @text-color; color: white; }
+.breadcrumb li:not(:last-child) a:hover:after { border-left-color: @text-color; }
+
+.breadcrumb li a:focus {
+    text-decoration: underline;
+}
+
+#layout.twocols, #layout.layout-minimal, div.compact {
+    .breadcrumb {
+        font-size: 0.833em;
+    }
+}
+
+/** END of breadcrumb **/
+
+
+ul.error, ul.warning {
+    padding: 0;
+    list-style-type: none;
+    background-color: @colorCritical;
+
+    li {
+        font-weight: bold;
+        color: white;
+        padding: 0.3em 0.8em;
+    }
+
+    li a {
+        color: inherit;
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: none;
+        }
+    }
+}
+
+
+ul.warning {
+    background-color: @colorWarning;
+}
+
+table.sourcecode {
+    font-family: monospace;
+    white-space: pre-wrap;
+
+    th {
+        vertical-align: top;
+        padding-right: 0.5em;
+        user-select: none;
+        -moz-user-select: none;
+        -o-user-select: none;
+        -ms-user-select: none;
+        -webkit-user-select: none;
+        font-weight: bold;
+    }
+    td {
+        vertical-align: top;
+    }
+}
+
+.diff {
+    font-family: monospace;
+    white-space: pre-wrap;
+
+    del, ins {
+        text-decoration: none;
+    }
+
+    del {
+        color: @colorCritical;
+        background-color: #fdd;
+    }
+
+    ins {
+        color: @colorOk;
+        background-color: #dfd;
+    }
+}
+
+/** Forms stolen from director **/
+.content form {
+    margin-bottom: 2em;
+}
+
+.content form.inline {
+    margin: 0;
+}
+
+.invisible {
+    position: absolute;
+    left: -100%;
+}
+
+form input[type=file] {
+    background-color: white;
+    padding-right: 1em;
+}
+
+
+form input[type=submit] {
+    .button();
+    border-width: 1px;
+    margin-top: 0.5em;
+
+    &:disabled {
+        border-color: @gray-light;
+        background-color: @gray-light;
+        color: #fff;
+    }
+}
+
+form input[type=submit]:first-of-type {
+    border-width: 2px;
+}
+
+form input[type=submit].link-button {
+    color: @icinga-blue;
+    background: none;
+    border: none;
+    padding: 0;
+
+    text-align: left;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+form p.description {
+    padding: 1em 1em;
+    margin: 0;
+    font-style: italic;
+    width: 100%;
+}
+
+input[type=text], input[type=button], select, select option, textarea {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+
+form ul.form-errors {
+    margin-bottom: 0.5em;
+
+    ul.errors li {
+        background: @color-critical;
+        font-weight: bold;
+        padding: 0.5em 1em;
+        color: white;
+    }
+}
+
+select::-ms-expand, input::-ms-expand, textarea::-ms-expand { /* for IE 11 */
+    display: none;
+}
+
+select {
+    border: 1px solid #ddd;
+    cursor: pointer;
+    background: none;
+}
+
+input[type=text], input[type=password], textarea, select {
+    max-width: 36em;
+    min-width: 20em;
+    width: 100%;
+    line-height: 2em;
+    height: 2.4em;
+    padding-left: 0.5em;
+    border-style: solid;
+    border-color: transparent;
+    border-bottom-color: @gray-lighter;
+    border-width: 1px 1px 1px 3px;
+    background-color: white;
+
+    &.search {
+        background: transparent url("../img/icons/search.png") no-repeat scroll 0.5em center / 1em 1em;
+        padding-left: 2em;
+    }
+}
+
+select[multiple] {
+    height: auto;
+}
+
+select option {
+    height: 2em;
+    padding-top: 0.3em;
+}
+
+select[multiple=multiple] {
+    height: auto;
+}
+
+label {
+    line-height: 2em;
+}
+
+form dl {
+    margin: 0;
+    padding: 0;
+}
+
+select::-moz-focus-inner { border: 0; }
+
+select:-moz-focusring {
+    color: transparent;
+    text-shadow: 0 0 0 #000;
+}
+
+select, input[type=text], textarea {
+    &:hover {
+        border-style: dotted solid dotted solid;
+        border-color: @gray-light;
+    }
+
+    &:focus, &:focus:hover {
+        border-style: solid;
+        border-color: @icinga-blue;
+        outline: none;
+    }
+}
+
+select[value=""] {
+    color: blue;
+    border: 1px solid #666;
+    background-color: white;
+}
+
+select option {
+    color: inherit;
+    padding-left: 0.5em;
+    background-color: white;
+}
+
+select option[value=""] {
+    color: #aaa;
+    background-color: white;
+}
+
+form dt label {
+    width: auto;
+    font-weight: normal;
+    font-size: inherit;
+
+    &.required {
+        &::after {
+            content: '*'
+        }
+    }
+
+    &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+    }
+}
+
+form fieldset {
+    min-width: 36em;
+}
+
+form dd input.related-action[type='submit'] {
+    display: none;
+}
+
+form dd.active li.active input.related-action[type='submit'] {
+    display: inline-block;
+}
+
+form dd.active {
+    p.description {
+        color: inherit;
+        font-style: normal;
+    }
+}
+
+form dd {
+    padding: 0.3em 0.5em;
+    margin: 0;
+}
+
+form dt {
+    padding: 0.5em 0.5em;
+    margin: 0;
+}
+
+form dt.active, form dd.active {
+    background-color: @tr-active-color;
+}
+
+form dt {
+    display: inline-block;
+    vertical-align: top;
+    min-width: 12em;
+    min-height: 2.5em;
+    width: 30%;
+    &.errors label {
+        color: @color-critical;
+    }
+}
+
+form .errors label {
+    color: @color-critical;
+}
+
+form dd {
+    display: inline-block;
+    width: 63%;
+    min-height: 2.5em;
+    vertical-align: top;
+    margin: 0;
+    &.errors {
+        input[type=text], select {
+            border-color: @color-critical;
+        }
+    }
+
+    &.full-width {
+        padding: 0.5em;
+        width: 100%;
+    }
+}
+
+form dd:after {
+    display: block;
+    content: '';
+}
+
+form textarea {
+    height: auto;
+}
+
+form dd ul.errors {
+    list-style-type: none;
+    padding-left: 0.3em;
+
+    li {
+        color: @colorCritical;
+        padding: 0.3em;
+    }
+}
+
+form div.hint {
+    padding: 1em;
+    background-color: @tr-hover-color;
+    margin: 1em 0;
+    max-width: 65em;
+    font-size: 1em;
+
+    pre {
+        font-style: normal;
+        background-color: white;
+        margin: 0;
+        padding: 1em;
+    }
+}
+
+
+form {
+    #_FAKE_SUBMIT {
+        position: absolute;
+        left: -100%;
+    }
+}
+
+/** END of forms **/
+
+/** php-diff **/
+.Differences {
+    width: 100%;
+    table-layout: fixed;
+    empty-cells: show;
+}
+
+.Differences thead {
+    display: none;
+}
+
+.Differences thead th {
+    text-align: left;
+    padding-left: 4 / 14 * 16em;
+}
+.Differences tbody th {
+    text-align: right;
+    width: 4em;
+    padding: 1px 2px;
+    border-right: 1px solid @gray-light;
+    background: @gray-lightest;
+    font-weight: normal;
+    vertical-align: top;
+}
+
+.Differences tbody td {
+    width: 50%;
+    .preformatted();
+    word-break: break-all;
+}
+
+@color-diff-ins: #bfb;
+@color-diff-del: #faa;
+@color-diff-changed-old: #fdd;
+@color-diff-changed-new: #efe;
+
+.DifferencesSideBySide {
+    ins, del {
+        text-decoration: none;
+    }
+
+    .ChangeInsert {
+        td.Left {
+            background: @gray-lighter;
+        }
+        td.Right {
+            background: @color-diff-ins;
+        }
+    }
+
+    .ChangeDelete {
+        td.Left {
+            background: @color-diff-del;
+        }
+        td.Right {
+            background: @gray-lighter;
+        }
+    }
+
+    .ChangeReplace {
+        td.Left {
+            background: @color-diff-changed-old;
+            del {
+                background: @color-diff-del;
+            }
+        }
+
+        td.Right {
+            background: @color-diff-changed-new;
+            ins {
+                background: @color-diff-ins;
+            }
+        }
+
+    }
+}
+
+.Differences .Skipped {
+    background: @gray-lightest;
+}
+
+.DifferencesInline .ChangeReplace .Left,
+.DifferencesInline .ChangeDelete .Left {
+    background: #fdd;
+}
+
+.DifferencesInline .ChangeReplace .Right,
+.DifferencesInline .ChangeInsert .Right {
+    background: #dfd;
+}
+
+.DifferencesInline .ChangeReplace ins {
+    background: #9e9;
+}
+
+.DifferencesInline .ChangeReplace del {
+    background: #e99;
+}
+/** END of php-diff **/
+
+/** Custom font styling **/
+textarea.smaller {
+    font-size: 0.833em;
+    max-width: 60em;
+}
+/** END of custom font styling **/
